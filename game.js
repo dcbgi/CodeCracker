@@ -2,7 +2,7 @@
  * CodeCracker – game logic
  *
  * Rules:
- *  - 7 colours available, 4-peg secret code (duplicates allowed)
+ *  - 6 colours available, 4-peg secret code (duplicates allowed)
  *  - Player has 7 attempts
  *  - Feedback per attempt:
  *      green dot  = correct colour AND correct position
@@ -14,7 +14,6 @@ const COLORS = [
   { id: 'blue',   label: 'Blue',   hex: '#0a84ff' },
   { id: 'green',  label: 'Green',  hex: '#30d158' },
   { id: 'yellow', label: 'Yellow', hex: '#ffd60a' },
-  { id: 'orange', label: 'Orange', hex: '#ff9f0a' },
   { id: 'purple', label: 'Purple', hex: '#bf5af2' },
   { id: 'pink',   label: 'Pink',   hex: '#ff375f' },
 ];
@@ -91,7 +90,7 @@ function computeFeedback(guess, secret) {
 
 // ── Board rendering ──────────────────────────────────────────
 
-/** Build the full board (5 rows × 4 pegs). */
+/** Build the full board (7 rows × 4 pegs). */
 function buildBoard() {
   board.innerHTML = '';
   for (let r = 0; r < MAX_ATTEMPTS; r++) {
