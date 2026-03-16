@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/cp -v index.html $DEPLOYPATH
+    - /bin/cp -v style.css $DEPLOYPATH
+    - /bin/cp -v game.js $DEPLOYPATH
