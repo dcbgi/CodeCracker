@@ -351,3 +351,14 @@ newGame();
 btnSubmit.addEventListener('click', submitGuess);
 btnClear.addEventListener('click', clearCurrentRow);
 btnNewGame.addEventListener('click', newGame);
+
+// ── Instructions dropdown ────────────────────────────────────
+
+const instructionsToggle = document.getElementById('instructions-toggle');
+const instructionsPanel  = document.getElementById('instructions');
+
+instructionsToggle.addEventListener('click', () => {
+  const isOpen = instructionsPanel.classList.toggle('open');
+  instructionsToggle.setAttribute('aria-expanded', String(isOpen));
+  instructionsPanel.setAttribute('aria-hidden', String(!isOpen));
+});

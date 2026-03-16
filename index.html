@@ -36,26 +36,30 @@
     <div id="secret-pegs"></div>
   </div>
 
-  <!-- How-to-play -->
-  <aside id="instructions">
-    <h3>How to Play</h3>
-    <p>
-      A secret 4-colour code has been generated. Use the palette to select
-      colours and fill each slot, then hit <strong>Submit</strong>.
-      After each guess you'll receive feedback:
-    </p>
-    <div class="legend">
-      <div class="legend-item">
-        <div class="legend-dot green"></div>
-        <span>Right colour, right position</span>
+  <!-- How-to-play dropdown -->
+  <div id="instructions-wrapper">
+    <button id="instructions-toggle" aria-expanded="false" aria-controls="instructions">
+      How to Play <span class="toggle-arrow" aria-hidden="true">▼</span>
+    </button>
+    <aside id="instructions" aria-hidden="true">
+      <p>
+        A secret 4-colour code has been generated. Use the palette to select
+        colours and fill each slot, then hit <strong>Submit</strong>.
+        After each guess you'll receive feedback:
+      </p>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-dot green"></div>
+          <span>Right colour, right position</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot yellow"></div>
+          <span>Right colour, wrong position</span>
+        </div>
       </div>
-      <div class="legend-item">
-        <div class="legend-dot yellow"></div>
-        <span>Right colour, wrong position</span>
-      </div>
-    </div>
-    <p style="margin-top:8px;">Duplicate colours are allowed. You have 5 attempts. Good luck!</p>
-  </aside>
+      <p style="margin-top:8px;">Duplicate colours are allowed. You have 5 attempts. Good luck!</p>
+    </aside>
+  </div>
 
   <script src="game.js"></script>
 </body>
