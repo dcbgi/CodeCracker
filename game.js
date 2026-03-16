@@ -3,23 +3,23 @@
  *
  * Rules:
  *  - 7 colours available, 4-peg secret code (duplicates allowed)
- *  - Player has 5 attempts
+ *  - Player has 7 attempts
  *  - Feedback per attempt:
  *      green dot  = correct colour AND correct position
  *      yellow dot = correct colour but wrong position
  */
 
 const COLORS = [
-  { id: 'red',    label: 'Red',    hex: '#e74c3c' },
-  { id: 'blue',   label: 'Blue',   hex: '#3498db' },
-  { id: 'green',  label: 'Green',  hex: '#2ecc71' },
-  { id: 'yellow', label: 'Yellow', hex: '#f1c40f' },
-  { id: 'orange', label: 'Orange', hex: '#e67e22' },
-  { id: 'purple', label: 'Purple', hex: '#9b59b6' },
-  { id: 'pink',   label: 'Pink',   hex: '#fd79a8' },
+  { id: 'red',    label: 'Red',    hex: '#ff2d55' },
+  { id: 'blue',   label: 'Blue',   hex: '#0a84ff' },
+  { id: 'green',  label: 'Green',  hex: '#30d158' },
+  { id: 'yellow', label: 'Yellow', hex: '#ffd60a' },
+  { id: 'orange', label: 'Orange', hex: '#ff9f0a' },
+  { id: 'purple', label: 'Purple', hex: '#bf5af2' },
+  { id: 'pink',   label: 'Pink',   hex: '#ff375f' },
 ];
 
-const MAX_ATTEMPTS = 5;
+const MAX_ATTEMPTS = 7;
 const CODE_LENGTH  = 4;
 
 // ── State ────────────────────────────────────────────────────
