@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeCracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🔐 CodeCracker</h1>
+  <p class="subtitle">Break the secret 4-colour code in 5 attempts!</p>
+
+  <!-- Game board (rows built by JS) -->
+  <div id="board" role="grid" aria-label="Game board"></div>
+
+  <!-- Colour palette -->
+  <section id="palette-section" aria-label="Colour palette">
+    <h2>Choose a colour</h2>
+    <div id="palette" role="toolbar" aria-label="Available colours"></div>
+  </section>
+
+  <!-- Action buttons -->
+  <div id="controls">
+    <button id="btn-submit" disabled aria-label="Submit guess">Submit</button>
+    <button id="btn-clear" aria-label="Clear current row">Clear Row</button>
+    <button id="btn-new-game" aria-label="Start a new game">New Game</button>
+  </div>
+
+  <!-- Status message -->
+  <div id="message" role="status" aria-live="polite">Attempt 1 of 5</div>
+
+  <!-- Secret code reveal (shown on game over) -->
+  <div id="secret-reveal" aria-label="Secret code">
+    <p>The secret code</p>
+    <div id="secret-pegs"></div>
+  </div>
+
+  <!-- How-to-play -->
+  <aside id="instructions">
+    <h3>How to Play</h3>
+    <p>
+      A secret 4-colour code has been generated. Use the palette to select
+      colours and fill each slot, then hit <strong>Submit</strong>.
+      After each guess you'll receive feedback:
+    </p>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot green"></div>
+        <span>Right colour, right position</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot yellow"></div>
+        <span>Right colour, wrong position</span>
+      </div>
+    </div>
+    <p style="margin-top:8px;">Duplicate colours are allowed. You have 5 attempts. Good luck!</p>
+  </aside>
+
+  <script src="game.js"></script>
+</body>
+</html>
